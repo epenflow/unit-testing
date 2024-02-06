@@ -1,10 +1,8 @@
 'use client';
-import React from 'react';
 import useIsomorphicLayoutEffect from '../hooks/useIsomorphicLayoutEffect';
 import Lenis from '@studio-freight/lenis';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import useBrowser from '../hooks/useBrowser';
 const LenisSroll = () => {
 	useIsomorphicLayoutEffect(() => {
 		const lenis = new Lenis({
@@ -13,7 +11,7 @@ const LenisSroll = () => {
 			syncTouch: true,
 			syncTouchLerp: 0.025,
 			autoResize: true,
-			touchInertiaMultiplier: 1,
+			touchInertiaMultiplier: 5.5,
 		});
 		function update(time: number) {
 			lenis.raf(time * 1000);
